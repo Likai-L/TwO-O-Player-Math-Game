@@ -9,11 +9,12 @@ class Round
     attr_reader :num1, :num2, :answer
   
     def check(answer)
-      return true if answer.to_i == @answer
-      false
+      unless answer.to_i == @answer
+        @current_player.lives --
+        return "#{current_player.name}, are you kidding me? NOOO! You just lost one life!"
+      end
+      return "Thats is correct, #{current_player.name}!"
     end
 
   end 
-
- 
   
