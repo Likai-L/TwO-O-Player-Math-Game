@@ -9,13 +9,15 @@ class Game
     puts "📣📣   NEW GAME   📣📣"
     i = 1
     until (@player1.lives == 0 || @player2.lives == 0) do
+
+      puts "🤓🤓   ROUND #{i}   🤓🤓"
       
       round = Round.new(i.odd? ? @player1 : @player2)
 
       puts round.prompt
       answer = gets.chomp
       round.check(answer)
-      puts "#{@player1.lives}/3 vs #{@player2.lives}/3"
+      puts "📝📝   #{@player1.lives}/3 vs #{@player2.lives}/3   📝📝"
       if @player1.lives == 0 
        @player2.win
         break

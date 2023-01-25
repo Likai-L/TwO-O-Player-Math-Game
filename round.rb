@@ -13,10 +13,10 @@ class Round
     def check(answer)
       unless answer.to_i == @answer
         @current_player.lives -= 1
-        puts "#{@current_player.name}, are you kidding me? NOOO! You just lost one life!"
+        puts "❌❌ Nah, #{@current_player.name}, that's wrong. You just lost one life! ❌❌"
         return
       end
-      puts "Thats is correct, #{@current_player.name}!"
+      puts "✅✅ Thats is correct, #{@current_player.name}! ✅✅"
     end
 
   end 
