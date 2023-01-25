@@ -7,13 +7,15 @@ class Round
     end 
   
     attr_reader :num1, :num2, :answer
+
   
     def check(answer)
       unless answer.to_i == @answer
         @current_player.lives --
-        return "#{current_player.name}, are you kidding me? NOOO! You just lost one life!"
+        puts "#{current_player.name}, are you kidding me? NOOO! You just lost one life!"
+        return
       end
-      return "Thats is correct, #{current_player.name}!"
+      puts "Thats is correct, #{current_player.name}!"
     end
 
   end 
